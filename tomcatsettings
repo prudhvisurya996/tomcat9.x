@@ -1,0 +1,35 @@
+cd /opt/tomcat9.x/webapps/manager/META-INF
+vi context.xml
+comment this line
+from    
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+   allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+to 
+   <!--   
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+   allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />-->
+
+cd /opt/tomcat9.x/webapps/host-manager/META-INF
+
+comment this line
+from    
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+   allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+to 
+   <!--   
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+   allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />-->
+
+
+#################################################################
+Add users for gui jmx script and status roles in 
+
+/opt/tomcat9.x/conf
+vi tomcat-users.xml
+
+
+  <user username="admin" password="admin" roles="manager-gui"/>
+  <user username="deloyer" password="deployer" roles="manager-script"/>
+  <user username="jmx" password="jmx" roles="manager-jmx"/>
+  <user username="status" password="status" roles="manager-status"/>
+   
