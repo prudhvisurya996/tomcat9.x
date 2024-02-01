@@ -32,4 +32,10 @@ vi tomcat-users.xml
   <user username="deloyer" password="deployer" roles="manager-script"/>
   <user username="jmx" password="jmx" roles="manager-jmx"/>
   <user username="status" password="status" roles="manager-status"/>
+#######################
+now start tomcat 
+in /opt/tomcat9.x/bin
+./startup.sh
+
+open PublicIP:8080 and you should be able to see the home page login to manager or host manager using gui role 
    
