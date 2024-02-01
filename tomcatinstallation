@@ -1,0 +1,17 @@
+#!/bin/bash/
+apt update -y
+sleep3
+apt install openjdk-11-jdk -y
+sleep 5
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
+sleep 5
+tar -xvf apache-tomcat-9.0.85.tar.gz
+sleep 5
+rm -rf apache-tomcat-9.0.85.tar.gz
+sleep 5
+mv apache-tomcat-9.0.85 tomcat9.x
+sleep 2
+cp -R tomcat9.x /opt/
+echo "tomcat9.x copied to opt folder oepn it follow settingsfile"
+
+
