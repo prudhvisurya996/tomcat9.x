@@ -12,6 +12,9 @@ sleep 5
 mv apache-tomcat-9.0.85 tomcat9.x
 sleep 2
 cp -R tomcat9.x /opt/
-echo "tomcat9.x copied to opt folder oepn it follow settingsfile"
+echo "tomcat9.x copied to opt folder"
+
+
+
 
 
